@@ -1,0 +1,26 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+//工具類
+@import "../scss/helpers/myVariables";
+@import "../scss/helpers/mixin";
+
+//元件
+@import "../scss/component/card";
+@import "../scss/component/banner";
+@import "../scss/component/list-group";
+@import "../scss/component/breadcrumb";
+@import "../scss/component/btn";
+@import "../scss/component/modal";
+
+//page
+@import "../scss/layout";
+
+
+
+
+ 

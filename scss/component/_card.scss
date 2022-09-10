@@ -1,0 +1,89 @@
+// 所有卡片共用
+.card:hover .img {
+    @include imgHover;
+}
+.card:hover{
+    cursor: pointer;
+}
+
+
+// 課程花絮開始
+.trivia-card {
+    overflow: hidden;
+    
+
+    .card-body {
+        position: relative;
+        background: linear-gradient(0%, $primary,$white);
+    }
+
+    .txt {
+        background: linear-gradient(to top, $primary, rgba($white, .0));
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+}
+
+.trivia-img1 {
+    background-image: url('../img/trivia1.jpg');
+    width: 100%;
+    height: 390px;
+}
+
+.trivia-img2 {
+    background-image: url('../img/trivia2.jpg');
+    width: 100%;
+    height: 390px;
+}
+
+.trivia-img3 {
+    background-image: url('../img/trivia3.jpg');
+    width: 100%;
+    height: 390px;
+}
+
+// 課程花絮結束
+
+// 最新消息開始
+.index-new{
+    .col{
+        @media(max-width:280px) {
+                width: 100% !important;
+            }
+    }
+}
+
+.index-new{
+    @include iphone{
+        .new-card{
+            .row{
+                flex-direction: column !important;
+            }
+            .col-sm-4,.img{
+                border-radius:12px 12px 0px 0px !important ;
+            }
+        }
+        
+    }
+}
+
+.full-box{
+   position: relative;
+   
+   .full-text{
+    background: rgba(#b7b7b7 ,.87);
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 0.2em $dark;
+    
+   }
+}

@@ -1,0 +1,72 @@
+$banner-green: #00a395;
+$banner-dark-blue: #005eac;
+$banner-blue: #00ffdb;
+
+ul{
+    padding: 0;
+    margin: 0;
+    li{
+        list-style: none;
+    }
+}
+h1,h2,h3,h4,h5,p{
+    margin: 0 !important;
+}
+.bg-cover {
+    background-position: center center;
+    background-size: cover;
+}
+input,select{
+    cursor: pointer;
+}
+// .container{
+//     border: 1px solid black;
+// }
+
+// 漸層開始
+.bg-gradient-color {
+    background: linear-gradient(45deg, $banner-green, $banner-dark-blue, $banner-blue);
+    background-size: 200%, 200%;
+    animation: bggradient 20s ease infinite;
+}
+
+@keyframes bggradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// 漸層結束
+
+// 圖片hover開始
+.hidden {
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.hidden-left {
+    border-radius: 12px 0px 0px 12px;
+    overflow: hidden;
+}
+// 圖片hover結束
+
+.text-more:hover {//更多動畫
+    color: $primary;
+    cursor: pointer;
+
+    span {
+        transform: translateX(15%);
+        transition: all .3s;
+    }
+}
+.rounded-custom{
+    border-radius: 12px;
+}

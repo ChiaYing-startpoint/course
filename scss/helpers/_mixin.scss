@@ -1,0 +1,16 @@
+@mixin pad {
+    @media(max-width:912px){
+        @content;
+    }
+}
+
+@mixin iphone{
+    @media(max-width:540px){
+        @content;
+    }
+}
+
+@mixin imgHover{
+    transform: scale(1.05);
+    transition: all .45s;
+}

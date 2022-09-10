@@ -1,0 +1,38 @@
+//------------------ 篩選列表開始----------------------------
+
+//產品頁、產品明細頁
+.product-main,
+.productDital-main {
+    .list-group-item.active {
+        border-bottom: 8px solid $primary  !important;
+        font-weight: bold;
+    }
+
+    .list-group {
+        width: 26%;
+        @include iphone{
+            width: 100% !important;
+        }
+    }
+
+    .dital-list-group {
+        width: 50%;
+        @include iphone{
+            width: 100% !important;
+        }
+    }
+}
+
+//付款方式
+.payment-main {
+    .list-group-item {
+        border: 1px solid rgba($black, .125) !important;
+    }
+
+    .list-group-item.active {
+        border: 4px solid $primary  !important;
+        font-weight: bold;
+    }
+}
+
+//-------------------------- 篩選列表結束--------------------------------------

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="./scss/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   
+    
+</head>
+
+<body>
+    <!-- 表頭開始 -->
+    <header class=" header border-bottom  ">
+        <div class="d-flex justify-content-between align-items-center ">
+            <h1 class="ms-3 "><a href="index.html">推廣教育課程入口網</a></h1>
+            <ul class="header-menu d-flex align-items-center justify-content-end">
+                <li class="border-end border-start ">
+                    <div class="dropdown">
+                        <button class="btn btn-white dropdown-toggle rounded-0 d-none d-lg-block " type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                           所有課程
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="product.html">音樂</a></li>
+                            <li><a class="dropdown-item" href="product.html">語言</a></li>
+                            <li><a class="dropdown-item" href="product.html">攝影</a></li>
+                            <li><a class="dropdown-item" href="product.html">攝影</a></li>
+                            <li><a class="dropdown-item" href="product.html">藝術</a></li>
+                            <li><a class="dropdown-item" href="product.html">設計</a></li>
+                            <li><a class="dropdown-item" href="product.html">人文</a></li>
+                            <li><a class="dropdown-item" href="product.html">程式</a></li>
+                            <li><a class="dropdown-item" href="product.html">投資理財</a></li>
+                            <li><a class="dropdown-item" href="product.html">職場技能</a></li>
+                            <li><a class="dropdown-item" href="product.html">手作生活</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-icon">
+                    <a href="" class="d-flex flex-column align-items-center  justify-content-center border-end" data-bs-toggle="modal" data-bs-target="#exampleModal"><span
+                            class="material-icons-outlined mb-1">perm_identity</span><small>未登入</small></a>
+                </li>
+                <li class="menu-icon">
+                    <a href="" class="d-flex flex-column align-items-center  justify-content-center  border-end"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><span
+                            class="material-icons-outlined mb-1">shopping_cart</span><small>購物車</small></a>
+                </li>
+                <li class="menu-icon">
+                    <a href="" class="d-flex flex-column align-items-center justify-content-center  border-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><span
+                            class="material-icons-outlined mb-1">search</span><small>搜尋</small></a>
+                </li>
+                <li class="menu-icon hamburger bg-primary  ">
+                    <a href="" class="d-flex flex-column align-items-center  justify-content-center text-white ">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 表頭結束 -->
+    <!-- Modal註冊登入開始 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content regist-modal-content p-lg-6">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold fs-3" id="exampleModalLabel">會員登入</h5>
+                    <button type="button" class="btn-close cus-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="d-flex flex-column justify-content-between   h-100">
+                        <div>
+                            <div class="d-flex justify-content-center mb-4">
+                                <a href="index.html" class="btn border  btn-lg me-4 btn-social"><img src="./img/fb.svg" class="icon-fb" alt=""></a>
+                                <a href="index.html" class="btn border btn-lg btn-social d-flex align-items-center "><img src="./img/google.svg" class="icon-google"
+                                        alt=""></a>
+                            </div>
+                            <p class="text-center mx-2 ">或使用 Email 帳號密碼登入</p>
+                        </div>
+                        <section>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">帳號</label>
+                                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="帳號名稱/電子信箱">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">密碼</label>
+                                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="密碼">
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">記住我</label>
+                                </div>
+                            </form>
+                        </section>
+                        <div class=" d-flex ">
+                            <a href="index.html" class="btn btn-primary btn-lg w-50 me-4" >登入</a>
+                            <a href="index.html" class="btn btn-outline-primary btn-lg w-50">註冊</a>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- Modal註冊登入結束 -->
+    <!-- offcanvas購物車開始 -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel" class="fw-bold">購物車</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <hr class=" my-0">
+        <div class="offcanvas-body">
+            <div>
+                <a href="">
+                    <div class="row mb-6 gx-3">
+                        <div class="col-5">
+                            <img src="./img/p1.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <div class="txt h-100 d-flex flex-column justify-content-between ">
+                                <p class="fw-bold">實用Photoshop - 掌握基礎</p>
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <p class="me-3 text-decoration-line-through text-secondary"><small>NT$ 3,520</small></p>
+                                    <p>NT$ 2,520</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row gx-3">
+                        <div class="col-5">
+                            <img src="./img/p1.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <div class="txt h-100 d-flex flex-column justify-content-between ">
+                                <p class="fw-bold">實用Photoshop - 掌握基礎</p>
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <p class="me-3 text-decoration-line-through text-secondary"><small>NT$ 3,520</small></p>
+                                    <p>NT$ 2,520</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <hr>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="text-secondary"><small>總計兩堂課</small></p>
+                        <h5 class="fw-bold text-primary">5040元</h5>
+                    </div>
+                    <a href="payment.html" class="btn btn-primary btn-lg shop-btn">前往購物車</a>
+                </div>
+    
+            </div>
+    
+    
+        </div>
+    </div>
+    <!-- offcanvas購物車結束 -->
+    <!-- offcanvas搜尋開始 -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <form action="">
+                            <div class="input-group input-group-lg ">
+                                <input type="text" class="form-control" placeholder="篩選課程" aria-label="Recipient's username"
+                                    aria-describedby="button-addon2">
+                                <button class="btn btn-primary d-flex align-items-center justify-content-center"
+                                    type="button" id="button-addon2"><span class="material-icons-outlined">
+                                        search
+                                    </span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <!-- offcanvas搜尋結束 -->
+    <!-- 右側選單開始 -->
+    <aside class="aside card rounded-0 border-0 bg-info">
+        <div class="card-header mb-0 py-0 border-0 bg-info rounded-0">
+            <a href="product.html" class="d-flex justify-content-between align-items bg-info item item-header">
+                <p>課程類別</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+        </div>
+        <div class="card-body bg-primary pt-0">
+            <a href="" class="d-flex justify-content-between align-items bg-primary text-white item">
+                <p>我的課程</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+            <a href="" class="d-flex justify-content-between align-items bg-primary text-white item">
+                <p>個人檔案</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+            <a href="" class="d-flex justify-content-between align-items bg-primary text-white item">
+                <p>我的訂閱</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+            <a href="" class="d-flex justify-content-between align-items bg-primary text-white item">
+                <p>我的折扣</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+            <a href="" class="d-flex justify-content-between align-items bg-primary text-white item">
+                <p>我的收藏</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+            <a href="" class="d-flex justify-content-between align-items bg-primary text-white item">
+                <p>邀請好友</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+            <a href="" class="d-flex justify-content-between align-items bg-primary text-white item">
+                <p>常見問題</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+            <a href="" class="d-flex justify-content-between align-items bg-primary text-white item">
+                <p>登出</p>
+                <span class="material-icons-outlined">
+                    chevron_right
+                </span>
+            </a>
+            
+        </div>
+        
+    </aside>
+    <!-- 右側選單結束 -->
+    <!-- banner開始 -->
+    <header class="index-banner container mt-80 mt-sm-120 mt-lg-120">
+        <!-- Slider main container -->
+        <div class=" swiper swiper1">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide  ">
+                    <div class="banner-img1 bg-cover"></div>
+                </div>
+                <div class="swiper-slide  ">
+                    <div class="banner-img2 bg-cover"></div>
+                </div>
+                <div class="swiper-slide  ">
+                    <div class="banner-img3 bg-cover"></div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev bg-light rounded-circle p-6 text-primary shadow border">
+                <span class="material-icons-outlined">
+                    arrow_back_ios
+                </span>
+            </div>
+            <div class="swiper-button-next bg-light rounded-circle text-primary p-6 shadow border">
+                <span class="material-icons-outlined">
+                    arrow_forward_ios
+                </span>
+            </div>
+        </div>
+    </header>
+    <!-- banner結束 -->
+    <main class="py-9 py-lg-100">
+        <!-- 熱門課程開始 -->
+        <section class="mb-9 mb-lg-100">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center section-title">
+                    <h3 class="h2 fw-bold">精選課程</h3>
+                    <div class="text-more d-flex align-items-center">
+                        <p class=" me-1">更多</p>
+                        <span class="material-icons-outlined">
+                            arrow_forward
+                        </span>
+                    </div>
+                </div>
+                <div class="border border-secondary mt-3 mb-7"></div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 gy-4">
+                    <!-- 1. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card">
+                                <div class="hidden">
+                                    <img src="./img/p1.jpg" class="img card-img-top img-fluid" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class=" fw-bold mb-2">實用Photoshop</h5>
+                                    <p class="text-secondary mb-5">課時10小時15分鐘</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/c1.jpg" alt="" class="rounded-circle img-fluid me-2">
+                                            <p class="fw-bold"><small>王小明</small></p>
+                                        </div>
+                                        <div class="">
+                                            <p class="fw-bold text-secondary text-decoration-line-through"><small>NT$ 3,520</small></p>
+                                            <h5 class=" fw-bold">NT$ 2,520</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary w-100 me-2 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">加入購物車</a>
+                                        <a href="#" class="btn btn-primary w-100">立即購買</a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 2. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card">
+                                <div class="hidden">
+                                    <img src="./img/p2.jpg" class="img card-img-top img-fluid" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class=" fw-bold mb-2">花藝創作課程</h5>
+                                    <p class="text-secondary mb-5">課時10小時15分鐘</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/c2.jpg" alt="" class="rounded-circle img-fluid me-2">
+                                            <p class="fw-bold"><small>陳美馨</small></p>
+                                        </div>
+                                        <div class="">
+                                            <p class="fw-bold text-secondary text-decoration-line-through"><small>NT$ 3,520</small></p>
+                                            <h5 class=" fw-bold">NT$ 2,520</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary w-100 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">加入購物車</a>
+                                        <a href="#" class="btn btn-primary w-100">立即購買</a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 3. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card">
+                                <div class="hidden">
+                                    <img src="./img/p3.jpg" class="img card-img-top img-fluid" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class=" fw-bold mb-2">期貨新手懶人投資術</h5>
+                                    <p class="text-secondary mb-5">課時10小時15分鐘</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/c3.jpg" alt="" class="rounded-circle img-fluid me-2">
+                                            <p class="fw-bold"><small>林玉華</small></p>
+                                        </div>
+                                        <div class="">
+                                            <p class="fw-bold text-secondary text-decoration-line-through"><small>NT$ 3,520</small></p>
+                                            <h5 class=" fw-bold">NT$ 2,520</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary w-100 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">加入購物車</a>
+                                        <a href="#" class="btn btn-primary w-100">立即購買</a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 4. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card">
+                                <div class="hidden">
+                                    <img src="./img/p4.jpg" class="img card-img-top img-fluid" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class=" fw-bold mb-2">超現實攝影光影課</h5>
+                                    <p class="text-secondary mb-5">課時10小時15分鐘</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/c1.jpg" alt="" class="rounded-circle img-fluid me-2">
+                                            <p class="fw-bold"><small>鄭明榮</small></p>
+                                        </div>
+                                        <div class="">
+                                            <p class="fw-bold text-secondary text-decoration-line-through"><small>NT$ 3,520</small></p>
+                                            <h5 class=" fw-bold">NT$ 2,520</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary w-100 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">加入購物車</a>
+                                        <a href="#" class="btn btn-primary w-100">立即購買</a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 熱門課程結束 -->
+        <!-- 精選課程開始 -->
+        <section class="mb-9 mb-lg-100">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center section-title">
+                    <h3 class="h2 fw-bold">熱門課程</h3>
+                    <div class="text-more d-flex align-items-center">
+                        <p class="me-1">更多</p>
+                        <span class="material-icons-outlined">
+                            arrow_forward
+                        </span>
+                    </div>
+                </div>
+                <div class="border border-secondary mt-3 mb-7"></div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 gy-4">
+                    <!-- 1. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card">
+                                <div class="hidden">
+                                    <img src="./img/p5.jpg" class="img card-img-top img-fluid" alt="...">
+                                </div>
+                                <div class="card-body ">
+                                    <h5 class=" fw-bold mb-2">職場必備的批判思考</h5>
+                                    <p class="text-secondary mb-5">課時10小時15分鐘</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/c2.jpg" alt="" class="rounded-circle img-fluid me-2">
+                                            <p class="fw-bold"><small>蔡慧琳</small></p>
+                                        </div>
+                                        <div class="">
+                                            <p class="fw-bold text-secondary text-decoration-line-through"><small>NT$ 3,520</small></p>
+                                            <h5 class=" fw-bold">NT$ 2,520</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary w-100 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">加入購物車</a>
+                                        <a href="#" class="btn btn-primary w-100">立即購買</a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 2. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card">
+                                <div class="hidden">
+                                    <img src="./img/p6.jpg" class="img card-img-top img-fluid" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class=" fw-bold mb-2">加密貨幣零基礎</h5>
+                                    <p class="text-secondary mb-5">課時10小時15分鐘</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/c3.jpg" alt="" class="rounded-circle img-fluid me-2">
+                                            <p class="fw-bold"><small>黃莉惠</small></p>
+                                        </div>
+                                        <div class="">
+                                            <p class="fw-bold text-secondary text-decoration-line-through"><small>NT$ 3,520</small></p>
+                                            <h5 class=" fw-bold">NT$ 2,520</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary w-100 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">加入購物車</a>
+                                        <a href="#" class="btn btn-primary w-100">立即購買</a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 3. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card">
+                                <div class="hidden">
+                                    <img src="./img/p7.jpg" class="img card-img-top img-fluid" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class=" fw-bold mb-2">人文與旅行攝影課</h5>
+                                    <p class="text-secondary mb-5">課時10小時15分鐘</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/c1.jpg" alt="" class="rounded-circle img-fluid me-2">
+                                            <p class="fw-bold"><small>劉啟銘</small></p>
+                                        </div>
+                                        <div class="">
+                                            <p class="fw-bold text-secondary text-decoration-line-through"><small>NT$ 3,520</small></p>
+                                            <h5 class=" fw-bold">NT$ 2,520</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary w-100 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">加入購物車</a>
+                                        <a href="#" class="btn btn-primary w-100">立即購買</a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 4. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card">
+                                <div class="hidden">
+                                    <img src="./img/p8.jpg" class="img card-img-top img-fluid" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class=" fw-bold mb-2">第八期IELTS英檢班</h5>
+                                    <p class="text-secondary mb-5">課時10小時15分鐘</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/c2.jpg" alt="" class="rounded-circle img-fluid me-2">
+                                            <p class="fw-bold"><small>陳雨欣</small></p>
+                                        </div>
+                                        <div class="">
+                                            <p class="fw-bold text-secondary text-decoration-line-through"><small>NT$ 3,520</small></p>
+                                            <h5 class=" fw-bold">NT$ 2,520</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary w-100 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">加入購物車</a>
+                                        <a href="#" class="btn btn-primary w-100">立即購買</a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 精選課程結束 -->
+        <!-- 課程花絮開始 -->
+        <section class="mb-9 mb-lg-100">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center section-title">
+                    <h3 class="h2 fw-bold">課程花絮</h3>
+                    <div class="text-more d-flex align-items-center">
+                        <p class="me-1">更多</p>
+                        <span class="material-icons-outlined">
+                            arrow_forward
+                        </span>
+                    </div>
+                </div>
+                <div class="border border-secondary mt-3 mb-7"></div>
+                <div class="row row-cols-1 row-cols-md-3 gy-4">
+                    <!-- 1. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card trivia-card p-0">
+                                <div class="card-body  p-0">
+                                    <div class="img trivia-img1 bg-cover"></div>
+                                    <div class="txt d-flex flex-column  justify-content-end text-white pb-6 px-6 ">
+                                        <h5 class="mb-2 fw-bold">【法律課程】國民生活法律班</h5>
+                                        <p>生活上容易碰到的法律問題，藉由課程建立民眾基本法律知識，進而保護自己，將法律自然融入生活中，以培養正確的法治觀念。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 2. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card trivia-card p-0">
+                                <div class="card-body  p-0">
+                                    <div class="img trivia-img2 bg-cover"></div>
+                                    <div class="txt d-flex flex-column  justify-content-end text-white pb-6 px-6">
+                                        <h5 class="mb-2 fw-bold">【夏令營】心智圖親子夏令營</h5>
+                                        <p>《快速閱覽》運用快速閱覽關鍵字的技巧，改變一般人閱讀的六大障礙，提升閱讀速度至每分鐘1000-3000個字，節省閱讀時間。</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 3. -->
+                    <div class="col">
+                        <a href="product.html">
+                            <div class="card trivia-card p-0">
+                                <div class="card-body  p-0">
+                                    <div class="img trivia-img3 bg-cover"></div>
+                                    <div class="txt d-flex flex-column  justify-content-end text-white pb-6 px-6">
+                                        <h5 class="mb-2 fw-bold">【學分班】地政士學士學分班</h5>
+                                        <p>配合專門職業及技術人員普通考試地政士考試規則之規定，並協助欲考取地政士或對相關科目有興趣者，特開設此課程。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 課程花絮結束 -->
+        <!-- 最新消息開始 -->
+        <section class="index-new">
+            <div class="container">
+                <div class=" d-flex justify-content-between align-items-center section-title">
+                    <h3 class="h2 fw-bold">最新消息</h3>
+                    <div class="text-more d-flex align-items-center">
+                        <p class="me-1">更多</p>
+                        <span class="material-icons-outlined">
+                            arrow_forward
+                        </span>
+                    </div>
+                </div>
+                <div class="border border-secondary mt-3 mb-7"></div>
+                <div class="row row-cols-1 row-cols-md-2 gy-3">
+                    <!-- 1. -->
+                    <div class="col">
+                        <div class="new-card card mb-3">
+                            <div class="row g-0">
+                                <div class="col col-sm-4 hidden-left">
+                                    <img src="./img/new1.jpg" class="img img-fluid rounded-start h-100" alt="...">
+                                </div>
+                                <div class="col col-sm-8">
+                                    <div class="card-body">
+                                        <div class="txt d-flex align-items-center mb-4">
+                                            <p class="new-tag text-white bg-primary px-4 py-1"><small>最新消息</small></p>
+                                            <p class="ms-6"><small>2022.06.22</small></p>
+                                        </div>
+                                        <p>【大學樂齡課程】樂齡樂活學苑開班啦！一起來樂活人生吧</p>
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2. -->
+                    <div class="col">
+                        <div class="new-card card mb-3">
+                            <div class="row g-0">
+                                <div class="col col-sm-4 hidden-left">
+                                    <img src="./img/new2.jpg" class="img img-fluid rounded-start h-100" alt="...">
+                                </div>
+                                <div class="col col-sm-8">
+                                    <div class="card-body">
+                                        <div class="txt d-flex align-items-center mb-4">
+                                            <p class="new-tag text-white bg-primary px-4 py-1"><small>最新消息</small></p>
+                                            <p class="ms-6"><small>2022.06.22</small></p>
+                                        </div>
+                                        <p>111學年度第1學期碩士、學士學分專班(隨班附讀)開始招生囉</p>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3. -->
+                    <div class="col">
+                        <div class="new-card card mb-3">
+                            <div class="row g-0">
+                                <div class="col col-sm-4 hidden-left">
+                                    <img src="./img/new3.jpg" class="img img-fluid rounded-start h-100" alt="...">
+                                </div>
+                                <div class="col col-sm-8">
+                                    <div class="card-body">
+                                        <div class="txt d-flex align-items-center mb-4">
+                                            <p class="new-tag text-white bg-primary px-4 py-1"><small>最新消息</small></p>
+                                            <p class="ms-6"><small>2022.06.22</small></p>
+                                        </div>
+                                        <p>【實施校園場館進出管控措施，請配戴識別證或持個人證件進入各場館</p>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. -->
+                    <div class="col">
+                        <div class="new-card card mb-3">
+                            <div class="row g-0">
+                                <div class="col col-sm-4 hidden-left">
+                                    <img src="./img/new4.jpg" class="img img-fluid rounded-start h-100" alt="...">
+                                </div>
+                                <div class="col col-sm-8">
+                                    <div class="card-body">
+                                        <div class="txt d-flex align-items-center mb-4">
+                                            <p class="new-tag text-white bg-primary px-4 py-1"><small>最新消息</small></p>
+                                            <p class="ms-6"><small>2022.06.22</small></p>
+                                        </div>
+                                        <p>大學推廣教育部 - 2022年3月-5月「專業優質服務人員」季得獎人員</p>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+        <!-- 最新消息結束 -->
+    </main>
+    <!-- 表尾開始 -->
+    <footer class="py-80 py-lg-120  text-white bg-gradient-color ">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 justify-content-between align-items-center ">
+                <div class="col text-center text-md-start mb-7 mb-md-0">
+                    <h5 class="fw-bold mb-6"><a href="" class="text-white">推廣教育課程入口網</a></h5>
+                    <p><small>聯絡電話：(02)1234 - 5678</small></p>
+                    <p><small>地址:100006臺北市中正區中華路一段83號</small></p>
+                </div>
+                <div class="col">
+                    <div class="d-flex flex-column align-items-center align-items-lg-end ">
+                        <ul class="d-flex  mb-6">
+                            <li><a href="" class="text-white">關於本站</a></li>
+                            <li><a href="" class="text-white ms-6">最新消息</a></li>
+                            <li><a href="" class="text-white ms-6">所有課程</a></li>
+                            <li><a href="" class="text-white ms-6">常見問題</a></li>
+                        </ul>
+                        <div class="mb-6">
+                            <a href="" class="text-white"><i class="fab fa-facebook-f "></i></a>
+                            <a href="" class="text-white ms-7"><i class="fab fa-twitter"></i></a>
+                            <a href="" class="text-white ms-7"><i class="fab fa-instagram"></i></a>
+                            <a href="" class="text-white ms-7"><i class="fab fa-line "></i></a>
+                        </div>
+                        <p><small class="text-reserved">© 2022 School of Continuing Educationt. All Rights Reserved.</small></p>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </div>
+        <div class="top">
+            <a href="" class="text-white p-6 d-flex justify-content-center align-items-center " ><span class="material-icons-outlined ">
+                expand_less
+            </span></a>
+        </div>
+    </footer>
+    <!-- 表尾結束 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+</html>

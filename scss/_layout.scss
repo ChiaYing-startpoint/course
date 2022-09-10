@@ -1,0 +1,173 @@
+
+
+
+// 表頭開始
+.header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    background: $white;
+    h1 a{
+        background-image: url('../img/logo.svg');
+        display: block;
+        width: 272px;
+        height: 43px;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+        @include pad{
+            background-image: url('../img/m-logo.svg');
+            display: block;
+            width: 139px;
+            height: 20px;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+    }
+}
+.header-menu {
+    
+    .menu-icon a {
+        display: block;
+        width: 92px;
+        height: 80px;
+        @include iphone{
+            width: 51px;
+            height: 56px;
+        }
+        
+        small{
+            @include iphone{
+                display: none;
+            }
+        }
+    }
+     li:nth-child(2) a  {
+      @include iphone{
+        border-left: 1px solid $gray-300;
+      }
+    }
+    li:nth-child(2) a, li:nth-child(3) a, li:nth-child(4) a  {
+        @media(max-width:280px){
+            display: none !important;
+        }
+    }
+    
+    li:nth-child(5) a span {
+        font-size: 40px;
+    }
+
+    li:nth-child(1) button {
+        width: 138px;
+        height: 80px;
+    }
+    li:hover{
+        background: $info;
+        button{
+            background: $info;
+        }
+    }
+}
+// 表頭結束
+
+// 表尾開始
+footer {
+    position: relative;
+    .fab {
+        font-size: 24px;
+    }
+    .text-reserved {
+        font-size: 12px;
+    }
+    a:hover{
+        opacity: .87;
+    }
+    .top{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        a{
+            width: 56px;
+            height: 56px;
+            background: rgba($dark,.87);
+        }
+        span{
+            font-size: 48px;
+        }
+    }
+}
+// 表尾結束
+
+// 左側選單開始
+header {
+    position: relative;
+
+}
+
+.aside {
+    width: 375px;
+    transform: translateY(-120%); //隱藏在右側
+    position: fixed !important;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    top:80px;
+    z-index: 900;
+    transition: all .5s;
+    border-top: 4px solid $primary  !important;
+    overflow: hidden;
+
+    @include iphone {
+        top: 56px;
+        width: 100%;
+    }
+
+    .item-header {
+        padding: 16px 14px;
+    }
+
+    .item {
+        padding: 16px 14px;
+        border-bottom: 1px solid rgba($white, .2) !important;
+    }
+    .item:hover{
+       border-bottom: 4px solid $white !important;
+    }
+}
+
+.aside.open {
+    transform: translateY(0%);
+}
+
+.hamburger {
+    .line {
+        width: 28px;
+        height: 3px;
+        margin-bottom: 6px;
+        transition: all .5s;
+        background: $white;
+    }
+
+    &.active {
+        .line {
+            position: absolute;
+        }
+
+        .line:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        .line:nth-child(2) {
+            display: none;
+        }
+
+        .line:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+    }
+}
+// 左側選單結束

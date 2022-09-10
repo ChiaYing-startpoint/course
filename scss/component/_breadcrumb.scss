@@ -1,0 +1,6 @@
+.product-banner {
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: $white  !important;
+        
+    }
+}

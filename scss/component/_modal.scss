@@ -1,0 +1,52 @@
+.regist-modal-content {
+    height: 100vh !important;
+    @include pad{
+        height: 60vh !important;
+    }
+    @include iphone{
+        height: 100vh !important;
+    }
+
+    p {
+        position: relative;
+    }
+
+    p::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25%;
+        height: 1px;
+        background: rgba($secondary, .6);
+        @include pad{
+            width: 15%;
+        }
+    }
+
+    p::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25%;
+        height: 1px;
+        background: rgba($secondary, .6);
+        @include pad {
+            width: 15%;
+        }
+    }
+}
+
+.icon-google,
+.icon-fb {
+    width: 32px;
+    height: 32px;
+}
+.btn-social:hover{
+    background: $info;
+}
